@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="js-subscribe"
+  onclick="
+  subscribe()
+  ">
+    Subscribe
+  </button>
+
+  <p>calculate sipping</p>
+  <input class="unos" >
+  <button>calcuate</button>
+
+  <script>
+
+
+    function subscribe() {
+      const buttonElement = document.querySelector('.js-subscribe')
+
+      if (buttonElement.innerText === 'Subscribe') {
+        buttonElement.innerText = 'Subscribed'
+      } else {
+        buttonElement.innerText = 'Subscribe'
+      }
+    }
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>  Cart Quantity </p>
+
+  <button onclick="
+  console.log(`Cart Quantity: ${cartQuantity}`);
+">Show Quantity</button>
+
+  <button onclick="
+  cartQuantity++;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Add to Cart</button>
+
+  <button onclick="
+    cartQuantity += 2;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+2</button>
+
+  <button onclick="
+    cartQuantity = cartQuantity + 3;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+3</button>
+
+  <button onclick="
+      cartQuantity = 0;
+      console.log('Cart was reset');
+      console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Reset Cart</button>
+
+
+  <script>
+    //onclick
+    //skracenice za operacije matematicke
+    //${} and ``
+
+    // cost varijabla je ona koja ne moze da se menja kasnije
+    //const se koristi zbog bezbednosti i najbolja je praksa da se koristi
+    //za sve ono sto znamo da se kasnije nece menjati. npr const zbir = prva + 2;
+
+    //var je org od variable ali se ne koristi je zastareo
+    //typeof moze i na varijablu da se primeni
+    let cartQuantity = 0;
+
+  </script>
+</body>
+</html>
