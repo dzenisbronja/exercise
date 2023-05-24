@@ -1604,3 +1604,20 @@ class User {
 const jaAldin = new User("aldin", "halilovic", "coach", 0);
 
 // console.log(jaAldin);
+
+class Novi {
+  constructor(room, mate, func, town) {
+    this.room = room;
+    this.mate = mate;
+    this.func = func;
+    this.town = town;
+  }
+}
+
+function sayHello() {
+  console.log("hello world");
+}
+
+const idemo = new Novi(33, "james", sayHello, "capetown");
+
+console.log(idemo);
