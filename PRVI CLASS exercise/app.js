@@ -1620,4 +1620,10 @@ function sayHello() {
 
 const idemo = new Novi(33, "james", sayHello, "capetown");
 
-console.log(idemo);
+// console.log(idemo);
+
+///////////////////////////////////////////////////////////////////////
+
+const greeting = (ime = "salko") => "Hello " + ime;
+console.log(greeting());
+console.log(greeting("Metko"));
