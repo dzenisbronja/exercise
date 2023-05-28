@@ -1624,6 +1624,14 @@ const idemo = new Novi(33, "james", sayHello, "capetown");
 
 ///////////////////////////////////////////////////////////////////////
 
-const greeting = (ime = "salko") => "Hello " + ime;
-console.log(greeting());
-console.log(greeting("Metko"));
+class Driver {
+  constructor(name, car, town) {
+    this.name = name;
+    this.car = car;
+    this.town = town;
+  }
+}
+
+const samkoDriver = new Driver("samko", "tesla", "sebecevo");
+
+console.log(samkoDriver);
