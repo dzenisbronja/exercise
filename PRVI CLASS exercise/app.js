@@ -1634,4 +1634,16 @@ class Driver {
 
 const samkoDriver = new Driver("samko", "tesla", "sebecevo");
 
-console.log(samkoDriver);
+// console.log(samkoDriver);
+
+///////////////////////////////ES6///////////////////////////////////////
+
+function howMany(...args) {
+  return "You have passed " + args.length + " arguments.";
+}
+// console.log(howMany(0, 1, 2));
+// console.log(howMany("string", null, [1, 2, 3], {}));
+
+gretting = (named = "salko") => "hello " + named;
+// console.log(gretting("dinamitas"));
+// console.log(gretting());
