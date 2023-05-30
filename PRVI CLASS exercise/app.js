@@ -1638,12 +1638,25 @@ const samkoDriver = new Driver("samko", "tesla", "sebecevo");
 
 ///////////////////////////////ES6///////////////////////////////////////
 
+//nodredjen broj argumenata
 function howMany(...args) {
   return "You have passed " + args.length + " arguments.";
 }
 // console.log(howMany(0, 1, 2));
 // console.log(howMany("string", null, [1, 2, 3], {}));
 
+//deafaukt vrednost elementa, ako je sami ne damo/promenimo
 gretting = (named = "salko") => "hello " + named;
 // console.log(gretting("dinamitas"));
 // console.log(gretting());
+
+//spread operator
+const arr1 = ["JAN", "FEB", "MAR", "APR", "MAY"];
+let arr2;
+
+arr2 = [...arr1];
+// console.log(arr2);
+
+const arr = [6, 89, 3, 45];
+const maximus = Math.max(...arr);
+// console.log(maximus)
