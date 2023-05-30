@@ -1395,16 +1395,16 @@ const myArr = watchList.reduce((acc, curr) => {
 
 /////////////
 
-arr = [];
+// arr = [];
 
-watchList.forEach((el) => {
-  if (el.imdbRating >= 8.0) {
-    arr.push({
-      name: el.Title,
-      rating: el.imdbRating,
-    });
-  }
-});
+// watchList.forEach((el) => {
+//   if (el.imdbRating >= 8.0) {
+//     arr.push({
+//       name: el.Title,
+//       rating: el.imdbRating,
+//     });
+//   }
+// });
 
 // console.log(arr)
 
@@ -1622,8 +1622,6 @@ const idemo = new Novi(33, "james", sayHello, "capetown");
 
 // console.log(idemo);
 
-///////////////////////////////////////////////////////////////////////
-
 class Driver {
   constructor(name, car, town) {
     this.name = name;
@@ -1635,6 +1633,35 @@ class Driver {
 const samkoDriver = new Driver("samko", "tesla", "sebecevo");
 
 // console.log(samkoDriver);
+
+const mojeImeObjekat = {
+  ime: "Aldin",
+  prezime: "blabas;ldkasl;djsalk",
+};
+
+class newClass {
+  ime = "Aladin";
+  prezime = "alibaba";
+}
+
+const mojeIme = new newClass();
+// console.log(mojeIme);
+
+const obj = {
+  ime: "salko",
+};
+console.log(obj);
+
+const arrObj = [{ ime: "medo" }, { ime: "dedo" }];
+console.log(arrObj);
+
+const arrObjNam = [
+ prvi: {
+  ime:"beba"
+ }
+];
+
+console.log(arrObjNam);
 
 ///////////////////////////////ES6///////////////////////////////////////
 
@@ -1660,3 +1687,11 @@ arr2 = [...arr1];
 const arr = [6, 89, 3, 45];
 const maximus = Math.max(...arr);
 // console.log(maximus)
+
+//Destructuring Assignment
+const user = { name: "John Doe", age: 34 };
+
+//const name = user.name;         //old
+// const age = user.age;          //old
+
+const { name, age } = user; // new method
