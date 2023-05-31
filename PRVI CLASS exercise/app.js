@@ -1759,3 +1759,7 @@ const user = { name: "John Doe", age: 34 };
 // const age = user.age;          //old
 
 const { name, age } = user; // new method
+
+const [a, , , b, ...array] = [1, 2, 3, 4, 5, 6];
+console.log(a, b);
+console.log(array);
