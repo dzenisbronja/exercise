@@ -1760,6 +1760,31 @@ const user = { name: "John Doe", age: 34 };
 
 const { name, age } = user; // new method
 
+/////////
 const [a, , , b, ...array] = [1, 2, 3, 4, 5, 6];
-console.log(a, b);
-console.log(array);
+// console.log(a, b);
+// console.log(array);
+
+// getter and setter from class
+
+class Book {
+  constructor(author) {
+    this.author = author;
+  }
+  // getter
+  get writer() {
+    return this.author;
+  }
+  // setter
+  set writer(updatedAuthor) {
+    this.author = updatedAuthor;
+  }
+}
+
+const novel = new Book("Andric");
+// console.log(novel);
+writer = novel.writer;
+// console.log(writer);
+const newWriter = (novel.writer = "Selimovic");
+// console.log(newWriter);
+// console.log(novel);
