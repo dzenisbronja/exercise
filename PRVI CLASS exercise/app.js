@@ -1788,3 +1788,23 @@ writer = novel.writer;
 const newWriter = (novel.writer = "Selimovic");
 // console.log(newWriter);
 // console.log(novel);
+
+class Cats {
+  constructor(name, drive) {
+    this.name = name;
+    this.drive = drive;
+  }
+
+  getName() {
+    return this.name;
+  }
+
+  setName(newName) {
+    this.name = newName;
+  }
+}
+
+const katze = new Cats("macka", "4x4");
+// console.log(katze);
+// console.log(katze.getName());
+// console.log((katze.setName = "maki"));
