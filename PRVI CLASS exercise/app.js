@@ -1584,6 +1584,68 @@ function checkAge() {
 // console.log(ourDeleteFunction(2, 3));
 // console.log(ourDeleteFunction(3));
 
+///////////////////////////////ES6///////////////////////////////////////
+
+//nodredjen broj argumenata
+function howMany(...args) {
+  return "You have passed " + args.length + " arguments.";
+}
+// console.log(howMany(0, 1, 2));
+// console.log(howMany("string", null, [1, 2, 3], {}));
+
+//deafaukt vrednost elementa, ako je sami ne damo/promenimo
+gretting = (named = "salko") => "hello " + named;
+// console.log(gretting("dinamitas"));
+// console.log(gretting());
+
+//spread operator
+const arr1 = ["JAN", "FEB", "MAR", "APR", "MAY"];
+let arr2;
+
+arr2 = [...arr1];
+// console.log(arr2);
+
+const arr = [6, 89, 3, 45];
+const maximus = Math.max(...arr);
+// console.log(maximus)
+
+//Destructuring Assignment
+const user = { name: "John Doe", age: 34 };
+
+//const name = user.name;         //old
+// const age = user.age;          //old
+
+const { name, age } = user; // new method
+
+/////////
+const [a, , , b, ...array] = [1, 2, 3, 4, 5, 6];
+// console.log(a, b);
+// console.log(array);
+
+// getter and setter from class
+
+class Book {
+  constructor(author) {
+    this.author = author;
+  }
+  // getter
+  get writer() {
+    return this.author;
+  }
+  // setter
+  set writer(updatedAuthor) {
+    this.author = updatedAuthor;
+  }
+}
+
+const novel = new Book("Andric");
+// console.log(novel);
+writer = novel.writer;
+// console.log(writer);
+const newWriter = (novel.writer = "Selimovic");
+// console.log(newWriter);
+// console.log(novel);
+
 //////////////////////////////////////klase///////////////////////////
 
 class User {
@@ -1728,7 +1790,18 @@ const ourDog = new Dog(4, "yes", "Sladjana", "grey");
 const ourDogsTail = ourDog.getTail();
 // console.log(ourDogsTail);
 
-///public
+// public variable
+const myObject1 = {
+  name: "Parwinder",
+  sayMyName() {
+    return this.name;
+  },
+};
+
+// console.log(myObject1.name);
+// console.log(myObject1.sayMyName());
+
+/// public class
 class ObjectCreator {
   name;
 
@@ -1742,67 +1815,7 @@ class ObjectCreator {
 }
 
 const myObject = new ObjectCreator("bond");
-console.log(myObject.name);
-console.log(myObject.sayMyName());
+// console.log(myObject.name);
+// console.log(myObject.sayMyName());
 
-///////////////////////////////ES6///////////////////////////////////////
-
-//nodredjen broj argumenata
-function howMany(...args) {
-  return "You have passed " + args.length + " arguments.";
-}
-// console.log(howMany(0, 1, 2));
-// console.log(howMany("string", null, [1, 2, 3], {}));
-
-//deafaukt vrednost elementa, ako je sami ne damo/promenimo
-gretting = (named = "salko") => "hello " + named;
-// console.log(gretting("dinamitas"));
-// console.log(gretting());
-
-//spread operator
-const arr1 = ["JAN", "FEB", "MAR", "APR", "MAY"];
-let arr2;
-
-arr2 = [...arr1];
-// console.log(arr2);
-
-const arr = [6, 89, 3, 45];
-const maximus = Math.max(...arr);
-// console.log(maximus)
-
-//Destructuring Assignment
-const user = { name: "John Doe", age: 34 };
-
-//const name = user.name;         //old
-// const age = user.age;          //old
-
-const { name, age } = user; // new method
-
-/////////
-const [a, , , b, ...array] = [1, 2, 3, 4, 5, 6];
-// console.log(a, b);
-// console.log(array);
-
-// getter and setter from class
-
-class Book {
-  constructor(author) {
-    this.author = author;
-  }
-  // getter
-  get writer() {
-    return this.author;
-  }
-  // setter
-  set writer(updatedAuthor) {
-    this.author = updatedAuthor;
-  }
-}
-
-const novel = new Book("Andric");
-// console.log(novel);
-writer = novel.writer;
-// console.log(writer);
-const newWriter = (novel.writer = "Selimovic");
-// console.log(newWriter);
-// console.log(novel);
+// private
