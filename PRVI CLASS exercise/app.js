@@ -1882,3 +1882,29 @@ let nameGenerator = new NameGenerator("john");
 // console.log(`My name is ${nameGenerator.name}`);
 nameGenerator.name = "jilda"; //cannot assign to 'name' because it is a read-only property.
 // console.log(nameGenerator.name); //still name is "john"
+
+//////////////////////////////exercise classes/////////////////////////////////
+
+class Uber {
+  constructor(car, seats, driver) {
+    this.car = car;
+    this.seats = seats;
+    this.driver = driver;
+  }
+
+  getDriver() {
+    return this.driver;
+  }
+
+  setDriver(newDriver) {
+    this.driver = newDriver;
+  }
+}
+
+const newMember = new Uber("tesla", 5, "alan");
+console.log(newMember);
+const vozac = newMember.getDriver();
+console.log(vozac);
+const updated = (newMember.setDriver = "delon");
+console.log(updated);
+console.log(newMember);
