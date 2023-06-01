@@ -1885,6 +1885,7 @@ nameGenerator.name = "jilda"; //cannot assign to 'name' because it is a read-onl
 
 //////////////////////////////exercise classes/////////////////////////////////
 
+//public
 class Uber {
   constructor(car, seats, driver) {
     this.car = car;
@@ -1902,9 +1903,53 @@ class Uber {
 }
 
 const newMember = new Uber("tesla", 5, "alan");
-console.log(newMember);
+// console.log(newMember);
 const vozac = newMember.getDriver();
-console.log(vozac);
+// console.log(vozac);
 const updated = (newMember.setDriver = "delon");
-console.log(updated);
-console.log(newMember);
+// console.log(updated);
+// console.log(newMember);
+
+// privat
+class Employee {
+  #job;
+  #hours;
+  #place;
+
+  constructor(job, hours, place) {
+    this.#job = job;
+    this.#hours = hours;
+    this.#place = place;
+  }
+
+  getPlace() {
+    return this.#place;
+  }
+
+  getJob() {
+    return this.#job;
+  }
+
+  setPlace(newPlace) {
+    return (this.#place = newPlace);
+  }
+}
+
+const guster = new Employee("support", 55, "tech");
+// console.log(guster);
+// console.log(guster.job); //undefiend
+// console.log(guster.hours); //undefiend
+// console.log(guster.place); //undefiend
+
+// console.log(guster.getJob());
+
+const place = guster.getPlace();
+// console.log(place);
+// console.log(guster.getPlace());
+
+const newPlace = guster.setPlace("magacin");
+// console.log(newPlace);
+// console.log(guster);
+
+// console.log(guster.setPlace("mec"));
+// console.log(guster);
