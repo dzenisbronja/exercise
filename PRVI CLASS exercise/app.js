@@ -1727,6 +1727,25 @@ const ourDog = new Dog(4, "yes", "Sladjana", "grey");
 // ourDog.bark();
 const ourDogsTail = ourDog.getTail();
 // console.log(ourDogsTail);
+
+///private class
+class increasingCounter {
+  // value = 0;
+  #counter = 0;
+
+  increment() {
+    // this.value++;
+    this.#counter++;
+  }
+}
+
+const broj = new increasingCounter();
+// console.log(broj);
+// broj.increment();
+// console.log(broj);
+
+const broj2 = new increasingCounter();
+console.log(broj2);
 ///////////////////////////////ES6///////////////////////////////////////
 
 //nodredjen broj argumenata
@@ -1788,23 +1807,3 @@ writer = novel.writer;
 const newWriter = (novel.writer = "Selimovic");
 // console.log(newWriter);
 // console.log(novel);
-
-class Cats {
-  constructor(name, drive) {
-    this.name = name;
-    this.drive = drive;
-  }
-
-  getName() {
-    return this.name;
-  }
-
-  setName(newName) {
-    this.name = newName;
-  }
-}
-
-const katze = new Cats("macka", "4x4");
-// console.log(katze);
-// console.log(katze.getName());
-// console.log((katze.setName = "maki"));
