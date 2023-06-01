@@ -1910,6 +1910,9 @@ const updated = (newMember.setDriver = "delon");
 // console.log(updated);
 // console.log(newMember);
 
+console.log((newMember.car = "mcl"));
+console.log(newMember); // i ovde moze da se reassigna vrednost
+
 // privat
 class Employee {
   #job;
