@@ -1913,12 +1913,12 @@ const updated = (newMember.setDriver = "delon");
 // privat
 class Employee {
   #job;
-  #hours;
+  hours;
   #place;
 
   constructor(job, hours, place) {
     this.#job = job;
-    this.#hours = hours;
+    this.hours = hours;
     this.#place = place;
   }
 
@@ -1938,8 +1938,11 @@ class Employee {
 const guster = new Employee("support", 55, "tech");
 // console.log(guster);
 // console.log(guster.job); //undefiend
-// console.log(guster.hours); //undefiend
+// console.log(guster.hours); //55 jer je public
 // console.log(guster.place); //undefiend
+
+// console.log((guster.job = "athlete"));
+// console.log(guster);   //mogu se reassige-uju value pairs
 
 // console.log(guster.getJob());
 
@@ -1953,3 +1956,38 @@ const newPlace = guster.setPlace("magacin");
 
 // console.log(guster.setPlace("mec"));
 // console.log(guster);
+
+//prtected
+class Buyer {
+  _platform;
+  _country;
+  budget;
+
+  constructor(platform, country, budget) {
+    this._platform = platform;
+    this._country = country;
+    this.budget = budget;
+  }
+
+  getPlatform() {
+    return this._platform;
+  }
+
+  setPlatform(newPlatform) {
+    return (this._platform = newPlatform);
+  }
+}
+
+const kupac = new Buyer("ebay", "germany", 99);
+// console.log(kupac);
+
+const platform = kupac.getPlatform();
+// console.log(platform);
+
+const newPlatform = kupac.setPlatform("amazon");
+// console.log(newPlatform);
+// console.log(kupac);
+
+const newCountry = (kupac.country = "austria");
+// console.log(newCountry);
+// console.log(kupac); //zemlja je ostala nemacka, ne moze da se reassigna
