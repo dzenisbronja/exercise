@@ -1728,24 +1728,16 @@ const ourDog = new Dog(4, "yes", "Sladjana", "grey");
 const ourDogsTail = ourDog.getTail();
 // console.log(ourDogsTail);
 
-///private class
-class increasingCounter {
-  // value = 0;
-  #counter = 0;
+///public
+myObject = {
+  name: "bond",
+  sayMyName() {
+    return this.name;
+  },
+};
+// console.log(myObject.name);
+// console.log(myObject.sayMyName());
 
-  increment() {
-    // this.value++;
-    this.#counter++;
-  }
-}
-
-const broj = new increasingCounter();
-// console.log(broj);
-// broj.increment();
-// console.log(broj);
-
-const broj2 = new increasingCounter();
-console.log(broj2);
 ///////////////////////////////ES6///////////////////////////////////////
 
 //nodredjen broj argumenata
