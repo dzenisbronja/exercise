@@ -1790,7 +1790,7 @@ const ourDog = new Dog(4, "yes", "Sladjana", "grey");
 const ourDogsTail = ourDog.getTail();
 // console.log(ourDogsTail);
 
-// public variable
+// PUBLIC variable
 const myObject1 = {
   name: "Parwinder",
   sayMyName() {
@@ -1801,7 +1801,7 @@ const myObject1 = {
 // console.log(myObject1.name);
 // console.log(myObject1.sayMyName());
 
-/// public class
+/// PUBLIC class
 class ObjectCreator {
   name;
 
@@ -1818,4 +1818,58 @@ const myObject = new ObjectCreator("bond");
 // console.log(myObject.name);
 // console.log(myObject.sayMyName());
 
-// private
+// PRIVATE variable - closure
+
+function carMonitor() {
+  let speed = 0;
+
+  // console.log(speed);
+
+  return {
+    accelerate() {
+      return speed++;
+    },
+  };
+}
+
+let car = carMonitor();
+let redCar = carMonitor();
+// console.log(car.accelerate());
+// console.log(car.accelerate());
+// console.log(redCar.accelerate());
+// console.log(redCar.accelerate());
+// console.log(car.speed); //undefiend
+
+// PRIVATE classes with # notation
+
+class ObjectCreator2 {
+  #meaningOfLife;
+
+  constructor(name) {
+    this.#meaningOfLife = name;
+  }
+
+  returnMeaningOfLife() {
+    return this.#meaningOfLife;
+  }
+
+  #returnMessage() {
+    return "You will do great things in life";
+  }
+}
+
+const myObject3 = new ObjectCreator2("bond");
+// console.log(myObject3.returnMeaningOfLife()); // bond
+// console.log(myObject3["#meaningOfLife"]); // undefiend
+// console.log(myObject3.#meaningOfLife); // SyntaxError
+// console.log(myObject3.#returnMessage); // SyntaxError
+
+// PROTECTED class
+
+class NameGenerator {
+  _name;
+
+  constructor(name) {
+    this._name = name;
+  }
+}
