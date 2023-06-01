@@ -1729,14 +1729,21 @@ const ourDogsTail = ourDog.getTail();
 // console.log(ourDogsTail);
 
 ///public
-myObject = {
-  name: "bond",
+class ObjectCreator {
+  name;
+
+  constructor(name) {
+    this.name = name;
+  }
+
   sayMyName() {
     return this.name;
-  },
-};
-// console.log(myObject.name);
-// console.log(myObject.sayMyName());
+  }
+}
+
+const myObject = new ObjectCreator("bond");
+console.log(myObject.name);
+console.log(myObject.sayMyName());
 
 ///////////////////////////////ES6///////////////////////////////////////
 
