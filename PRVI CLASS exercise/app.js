@@ -1872,4 +1872,13 @@ class NameGenerator {
   constructor(name) {
     this._name = name;
   }
+
+  get name() {
+    return this._name;
+  }
 }
+
+let nameGenerator = new NameGenerator("john");
+// console.log(`My name is ${nameGenerator.name}`);
+nameGenerator.name = "jilda"; //cannot assign to 'name' because it is a read-only property.
+// console.log(nameGenerator.name); //still name is "john"
