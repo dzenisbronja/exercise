@@ -1995,55 +1995,22 @@ const newCountry = (kupac.country = "austria");
 // console.log(newCountry);
 // console.log(kupac); //zemlja je ostala nemacka, ne moze da se reassigna
 
-/////////////////////////////////////////////
-
 let komsija1 = "bozidar";
 let komsija2 = "muzafer";
 let komsinica = "Hasima";
 
-let godineKomsija1 = 50;
-let godineKomsija2 = 99;
-let godineKomsinica = 200;
+let godineKomsija1 = 202;
+let godineKomsija2 = 201;
+let godineKomsinica = 203;
 
-let najstariji;
-let drugi;
-let najmladji;
+let komsije = [
+  { ime: komsija1, godine: godineKomsija1 },
+  { ime: komsija2, godine: godineKomsija2 },
+  { ime: komsinica, godine: godineKomsinica },
+];
 
-switch (true) {
-  case godineKomsija1 > godineKomsija2 && godineKomsija1 > godineKomsinica:
-    najstariji = komsija1;
-    if (godineKomsija2 > godineKomsinica) {
-      drugi = komsija2;
-      najmladji = komsinica;
-    } else {
-      drugi = komsinica;
-      najmladji = komsija2;
-    }
-    break;
-
-  case godineKomsija2 > godineKomsija1 && godineKomsija2 > godineKomsinica:
-    najstariji = komsija2;
-    if (godineKomsija1 > godineKomsinica) {
-      drugi = komsija1;
-      najmladji = komsinica;
-    } else {
-      drugi = komsinica;
-      najmladji = komsija1;
-    }
-    break;
-
-  case godineKomsinica > godineKomsija1 && godineKomsinica > godineKomsija2:
-    najstariji = komsinica;
-    if (godineKomsija1 > godineKomsija2) {
-      drugi = komsija1;
-      najmladji = komsija2;
-    } else {
-      drugi = komsija2;
-      najmladji = komsija1;
-    }
-    break;
-}
+komsije.sort((a, b) => b.godine - a.godine);
 
 console.log(
-  `${najstariji} je najstarija, drugi je ${drugi}, a najmladji je ${najmladji}`
+  `${komsije[0].ime} je najstariji, ${komsije[1].ime} je drugi, a ${komsije[2].ime} je najmlađi`
 );
