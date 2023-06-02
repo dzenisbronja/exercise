@@ -2003,14 +2003,50 @@ let godineKomsija1 = 202;
 let godineKomsija2 = 201;
 let godineKomsinica = 203;
 
-let komsije = [
-  { ime: komsija1, godine: godineKomsija1 },
-  { ime: komsija2, godine: godineKomsija2 },
-  { ime: komsinica, godine: godineKomsinica },
-];
+let najstariji, srednji, najmladji;
 
-komsije.sort((a, b) => b.godine - a.godine);
+if (godineKomsija1 > godineKomsija2 && godineKomsija1 > godineKomsinica) {
+  najstariji = komsija1;
+  if (godineKomsija2 > godineKomsinica) {
+    srednji = komsija2;
+    najmladji = komsinica;
+  } else {
+    srednji = komsinica;
+    najmladji = komsinica;
+  }
+} else if (
+  godineKomsija2 > godineKomsija1 &&
+  godineKomsija2 > godineKomsinica
+) {
+  najstariji = komsija2;
+  if (godineKomsija1 > godineKomsinica) {
+    srednji = komsija1;
+    najmladji = komsinica;
+  } else {
+    srednji = komsinica;
+    najmladji = komsija1;
+  }
+} else if (
+  godineKomsinica > godineKomsija1 &&
+  godineKomsinica > godineKomsija2
+) {
+  najstariji = komsinica;
+  if (godineKomsija1 > godineKomsija2) {
+    srednji = komsija1;
+    najmladji = komsija2;
+  } else {
+    srednji = komsija2;
+    najmladji = komsija1;
+  }
+}
 
-console.log(
-  `${komsije[0].ime} je najstariji, ${komsije[1].ime} je drugi, a ${komsije[2].ime} je najmlađi`
-);
+// console.log(
+//   `${najstariji} je najstariji, ${srednji} je srednji, ${najmladji} je najmladji`
+// );
+
+/////////////////////////////////////sort()//////////////////////////////
+
+// const imena = ["ivan", "berin", "aldin", "albin"];
+// console.log(imena);
+// imena.sort();
+// console.log(imena);
