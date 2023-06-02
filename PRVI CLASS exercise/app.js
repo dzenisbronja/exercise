@@ -2050,3 +2050,35 @@ if (godineKomsija1 > godineKomsija2 && godineKomsija1 > godineKomsinica) {
 // console.log(imena);
 // imena.sort();
 // console.log(imena);
+
+// const brojevi = [222, 32, 43, 54, 65, 77, 45, 4, 0];
+
+// console.log(brojevi);
+
+// brojevi.sort((a, b) => a - b);
+
+// function compareFunction(a, b) {
+//   return b - a;
+// }  //u ovom slucaju funkcijiu prosledjujemo kao argument sort(compareFunction)
+
+// console.log(brojevi);
+
+const products = [
+  {
+    name: "laptop",
+    price: 1000,
+  },
+  {
+    name: "desktop",
+    price: 1500,
+  },
+  {
+    name: "laptop",
+    price: 500,
+  },
+];
+
+console.log(products);
+
+products.sort((a, b) => a.price - b.price);
+console.log(products);
