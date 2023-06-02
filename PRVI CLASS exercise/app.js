@@ -2082,3 +2082,6 @@ console.log(products);
 
 products.sort((a, b) => a.price - b.price);
 console.log(products);
+
+products.sort((a, b) => b.price - a.price);
+console.log(products);
