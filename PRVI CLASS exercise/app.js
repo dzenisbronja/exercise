@@ -1910,8 +1910,8 @@ const updated = (newMember.setDriver = "delon");
 // console.log(updated);
 // console.log(newMember);
 
-console.log((newMember.car = "mcl"));
-console.log(newMember); // i ovde moze da se reassigna vrednost
+// console.log((newMember.car = "mcl"));
+// console.log(newMember); // i ovde moze da se reassigna vrednost
 
 // privat
 class Employee {
@@ -1994,3 +1994,56 @@ const newPlatform = kupac.setPlatform("amazon");
 const newCountry = (kupac.country = "austria");
 // console.log(newCountry);
 // console.log(kupac); //zemlja je ostala nemacka, ne moze da se reassigna
+
+/////////////////////////////////////////////
+
+let komsija1 = "bozidar";
+let komsija2 = "muzafer";
+let komsinica = "Hasima";
+
+let godineKomsija1 = 50;
+let godineKomsija2 = 99;
+let godineKomsinica = 200;
+
+let najstariji;
+let drugi;
+let najmladji;
+
+switch (true) {
+  case godineKomsija1 > godineKomsija2 && godineKomsija1 > godineKomsinica:
+    najstariji = komsija1;
+    if (godineKomsija2 > godineKomsinica) {
+      drugi = komsija2;
+      najmladji = komsinica;
+    } else {
+      drugi = komsinica;
+      najmladji = komsija2;
+    }
+    break;
+
+  case godineKomsija2 > godineKomsija1 && godineKomsija2 > godineKomsinica:
+    najstariji = komsija2;
+    if (godineKomsija1 > godineKomsinica) {
+      drugi = komsija1;
+      najmladji = komsinica;
+    } else {
+      drugi = komsinica;
+      najmladji = komsija1;
+    }
+    break;
+
+  case godineKomsinica > godineKomsija1 && godineKomsinica > godineKomsija2:
+    najstariji = komsinica;
+    if (godineKomsija1 > godineKomsija2) {
+      drugi = komsija1;
+      najmladji = komsija2;
+    } else {
+      drugi = komsija2;
+      najmladji = komsija1;
+    }
+    break;
+}
+
+console.log(
+  `${najstariji} je najstarija, drugi je ${drugi}, a najmladji je ${najmladji}`
+);
