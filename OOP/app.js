@@ -55,3 +55,63 @@ console.log(totalWage);
 // -om refaktorisemo ruzni switch case statement
 // koji bi se inace koristio da odredi razlicito ponasanje istih metoda
 // u razlicitim situacijama
+
+/////////////////////////////PRACTICE
+
+// const circle = {
+//   radius: 1,
+//   location: {
+//     x: 1,
+//     y: 1,
+//   },
+//   draw() {
+//     console.log("draw");
+//   },
+// };
+
+// circle.draw();
+
+// factory function koristi return
+
+function createCircle(radius) {
+  return {
+    radius,
+    draw() {
+      console.log("draw");
+    },
+  };
+}
+
+const circle2 = createCircle(2);
+// circle2.draw();
+
+// Construction function koristi this keyword
+
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function () {
+    console.log("draw");
+  };
+}
+
+const another = new Circle(1);
+// another.draw();
+// svaki objekat u sebi sadrzi built in construction function
+// koja pravi new object i koristi this keyword
+// console.log(another.constructor);
+
+//funkcije su objekti i sve unutar js je objekat
+
+// const Circle1 = new Function(
+//   "radius",
+//   `
+// this.radius = radius;
+// this.draw = function () {
+//   console.log("draw");
+// };
+// `
+// );
+
+// const circle = new Circle1(2);
+// console.log(circle);
+// circle.draw();
