@@ -1995,93 +1995,32 @@ const newCountry = (kupac.country = "austria");
 // console.log(newCountry);
 // console.log(kupac); //zemlja je ostala nemacka, ne moze da se reassigna
 
-let komsija1 = "bozidar";
-let komsija2 = "muzafer";
-let komsinica = "Hasima";
+///////////////////////////////////////////////////////////////////////////////
+let password = "Davudkralj";
 
-let godineKomsija1 = 202;
-let godineKomsija2 = 201;
-let godineKomsinica = 203;
+// if (password.length > 8 && !password[0].toUpperCase()) {
+//   console.log("validna");
+// } else {
+//   console.log("nije validna");
+// }
 
-let najstariji, srednji, najmladji;
+let pomocna = password[0] === password[0].toUpperCase();
+console.log(pomocna);
+//ovde proveravamo da li je prvo slovo veliko
+//ako jeste, vratice true
 
-if (godineKomsija1 > godineKomsija2 && godineKomsija1 > godineKomsinica) {
-  najstariji = komsija1;
-  if (godineKomsija2 > godineKomsinica) {
-    srednji = komsija2;
-    najmladji = komsinica;
-  } else {
-    srednji = komsinica;
-    najmladji = komsinica;
-  }
-} else if (
-  godineKomsija2 > godineKomsija1 &&
-  godineKomsija2 > godineKomsinica
-) {
-  najstariji = komsija2;
-  if (godineKomsija1 > godineKomsinica) {
-    srednji = komsija1;
-    najmladji = komsinica;
-  } else {
-    srednji = komsinica;
-    najmladji = komsija1;
-  }
-} else if (
-  godineKomsinica > godineKomsija1 &&
-  godineKomsinica > godineKomsija2
-) {
-  najstariji = komsinica;
-  if (godineKomsija1 > godineKomsija2) {
-    srednji = komsija1;
-    najmladji = komsija2;
-  } else {
-    srednji = komsija2;
-    najmladji = komsija1;
-  }
-}
+let pomocna2 = password[0] !== password[0].toUpperCase();
+// console.log(pomocna2);
+//ovo je isti primer gornjem samo sa negacijom
 
-// console.log(
-//   `${najstariji} je najstariji, ${srednji} je srednji, ${najmladji} je najmladji`
-// );
+let helper = !password[0].toUpperCase();
+// console.log(helper);
+//ovo je boolean i uvek ce biti false, bez obzira na sve
+//razlog tome je sto ovde primenjujemo metodu i prvo slovo prebacjemo u veliko
+//kao takvo bi ono bez ! u booleanu uvek bilo true, no mi smo mu dodali negaciju
+//iznegirali smo true, te ce ono uvek biti false, bez obzira na sve ostalo
 
-/////////////////////////////////////sort()//////////////////////////////
-
-// const imena = ["ivan", "berin", "aldin", "albin"];
-// console.log(imena);
-// imena.sort();
-// console.log(imena);
-
-// const brojevi = [222, 32, 43, 54, 65, 77, 45, 4, 0];
-
-// console.log(brojevi);
-
-// brojevi.sort((a, b) => a - b);
-
-// function compareFunction(a, b) {
-//   return b - a;
-// }  //u ovom slucaju funkcijiu prosledjujemo kao argument sort(compareFunction)
-
-// console.log(brojevi);
-
-const products = [
-  {
-    name: "laptop",
-    price: 1000,
-  },
-  {
-    name: "desktop",
-    price: 1500,
-  },
-  {
-    name: "laptop",
-    price: 500,
-  },
-];
-
-console.log(products);
-
-products.sort((a, b) => a.price - b.price);
-console.log(products);
-
-products.sort((a, b) => b.price - a.price);
-console.log(products);
+let helper2 = password[0].toUpperCase();
+// console.log(helper2);
+//string jedini od prethodnih, ostali su booleani, ovo je string
+//ovde smo primenili metodu za veliko slovo i logovace na string tog slova
