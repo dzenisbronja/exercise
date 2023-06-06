@@ -88,29 +88,35 @@
 // const newName = maxi.setOurName("idea");
 // console.log(maxi); //ovako se jedino menja privat property, preko setera
 
-class Shop {
-  #ime;
-  lokacija;
-  logo;
+// class Shop {
+//   #ime;
+//   lokacija;
+//   logo;
 
-  static brojKasa = 10;
+//   static brojKasa = 10;
 
-  constructor(name, location, logo) {
-    this.#ime = name;
-    this.lokacija = location;
-    this.logo = logo;
-  }
+//   constructor(name, location, logo) {
+//     this.#ime = name;
+//     this.lokacija = location;
+//     this.logo = logo;
+//   }
 
-  ourName() {
-    return this.#ime;
-  }
+//   ourName() {
+//     return this.#ime;
+//   }
 
-  setOurName(nekoIme) {
-    return (this.#ime = nekoIme);
-  }
-}
+//   setOurName(nekoIme) {
+//     return (this.#ime = nekoIme);
+//   }
+// }
 
-const nekaProdavnica = new Shop("IDEA", "jedinstvo", "iDEA");
+// const nekaProdavnica = new Shop("IDEA", "jedinstvo", "iDEA");
 
-console.log(nekaProdavnica);
+// console.log(nekaProdavnica);
 // console.log(nekaProdavnica.#ime); // ne moze se ovako pristupiti
+
+// const imeProdavnice = nekaProdavnica.ourName();
+// console.log(imeProdavnice);
+
+// nekaProdavnica.setOurName("RODA");
+// console.log(nekaProdavnica);
