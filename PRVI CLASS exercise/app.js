@@ -1996,16 +1996,16 @@ const newCountry = (kupac.country = "austria");
 // console.log(kupac); //zemlja je ostala nemacka, ne moze da se reassigna
 
 ///////////////////////////////////////////////////////////////////////////////
-let password = "Davudkralj";
+let password = "davudkralj";
 
-// if (password.length > 8 && !password[0].toUpperCase()) {
+// if (password.length > 8 && password[0] === password[0].toUpperCase()) {
 //   console.log("validna");
 // } else {
 //   console.log("nije validna");
 // }
 
 let pomocna = password[0] === password[0].toUpperCase();
-console.log(pomocna);
+// console.log(pomocna);
 //ovde proveravamo da li je prvo slovo veliko
 //ako jeste, vratice true
 
@@ -2024,3 +2024,90 @@ let helper2 = password[0].toUpperCase();
 // console.log(helper2);
 //string jedini od prethodnih, ostali su booleani, ovo je string
 //ovde smo primenili metodu za veliko slovo i logovace na string tog slova
+
+////////////////////////////////////////////////////
+// const products = [
+//   {
+//     id: 1,
+//     name: "T-shirt",
+//     qty: 31,
+//     price_per_unit: 100,
+//   },
+//   {
+//     id: 2,
+//     name: "Sneakers",
+//     qty: 4,
+//     price_per_unit: 300,
+//   },
+//   {
+//     id: 3,
+//     name: "Necklace",
+//     qty: 2,
+//     price_per_unit: 150,
+//   },
+// ];
+
+//1 nacin map + reduce
+// const calculateCost = (arr) => {
+//   const totalPricePerUnit = arr.map((el) => el.qty * el.price_per_unit);
+
+//   const total = totalPricePerUnit.reduce((a, c) => a + c);
+
+//   return total;
+// };
+
+// console.log(calculateCost(products));
+
+//2 nacin map + reduce
+// const calculateCost = (arr) => {
+//   const totalPricePerUnit = arr.map((el) => {
+//     return {
+//       // id: el.id,
+//       // name: el.name,
+//       // qty: el.qty,
+//       // price_per_unit: el.price_per_unit, //ovo sve menja sledeca linij coda (...arr) = spread operator
+//       ...el,
+//       total: el.qty * el.price_per_unit,
+//     };
+//   });
+
+//   console.log(totalPricePerUnit);
+
+//   const total = totalPricePerUnit.reduce((a, c) => {
+//     return a + c.total;
+//   }, 0);
+
+//   return total;
+// };
+
+// console.log(calculateCost(products));
+
+//3 nacin reduce
+// const calculateCost = (arr) => {
+//   const total = arr.reduce((acc, cur) => {
+//     return acc + cur.qty * cur.price_per_unit;
+//   }, 0);
+//   return total;
+// };
+
+// console.log(calculateCost(products));
+
+//4 nacin forEach
+// const calculateCost = (arr) => {
+//   total = 0;
+
+//   arr.forEach((el) => (total += el.qty * el.price_per_unit));
+
+//   return total;
+// };
+
+// console.log(calculateCost(products));
+
+//5 nacin filter
+// const calculateCost = (arr) => {
+//   let total = arr
+//     .filter((el) => el.qty > 0)
+//     .reduce((a, c) => a + c.qty * c.price_per_unit, 0);
+//   return total;
+// };
+// console.log(calculateCost(products));
