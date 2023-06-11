@@ -22,3 +22,30 @@ const max = nums.reduce((a, c) => {
 }, -Infinity);
 
 console.log(max);
+
+// total value niza objekata
+
+const store = [
+  {
+    product: "laptop",
+    value: 1000,
+    count: 3,
+  },
+  {
+    product: "desktop",
+    value: 1500,
+    count: 4,
+  },
+  {
+    product: "mobile",
+    value: 500,
+    count: 10,
+  },
+];
+
+const total = store.reduce((a, c) => {
+  let ukupno = a + c.count * c.value;
+  return ukupno;
+}, 0);
+
+console.log(total);
