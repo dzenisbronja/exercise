@@ -144,4 +144,27 @@
 const classAges = [17, 17, 16, 21, 23, 16, 25, 20];
 
 const prosek = classAges.reduce((a, c) => a + c);
-console.log(prosek / classAges.length);
+// console.log(prosek / classAges.length);
+
+const miles = [502.8, 120.5, 350.6, 205.2, 100, 98, 115, 9000, 53];
+
+const km = miles.map((el) => el * 1.6);
+console.log(km);
+const avg = km.reduce((a, c) => a + c);
+console.log(avg);
+const prosecean = avg / miles.length;
+console.log(prosecean);
+
+///////////////////////////////////
+
+const mama = "MAMA ima momu";
+
+let brojMova = 0;
+
+for (let i = 0; i < mama.length; i++) {
+  if (mama[i] === "M" || mama[i] === "m") {
+    brojMova++;
+  }
+}
+
+console.log(brojMova);
