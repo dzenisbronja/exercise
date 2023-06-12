@@ -88,6 +88,8 @@
 // const newName = maxi.setOurName("idea");
 // console.log(maxi); //ovako se jedino menja privat property, preko setera
 
+////////drugi nacin za get
+
 // class Shop {
 //   #ime;
 //   lokacija;
@@ -120,3 +122,26 @@
 
 // nekaProdavnica.setOurName("RODA");
 // console.log(nekaProdavnica);
+
+/////////////////////////////////////////////////////////////////////////////
+
+// const prvaMatrica = [
+//   [20, 12, 25],
+//   [10, 222, 7],
+//   [99, 33, 46],
+// ];
+
+// for (let i = 0; i < prvaMatrica.length; i++) {
+//   for (let j = 0; j < prvaMatrica[i].length; j++) {
+//     prvaMatrica[i][j] % 2 === 0
+//       ? console.log(prvaMatrica[i][j], "paran broj")
+//       : console.log(prvaMatrica[i][j], "neparan broj");
+//   }
+// }
+
+////////////////////////////////////////////
+
+const classAges = [17, 17, 16, 21, 23, 16, 25, 20];
+
+const prosek = classAges.reduce((a, c) => a + c);
+console.log(prosek / classAges.length);
