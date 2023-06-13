@@ -242,29 +242,67 @@
 
 //////////////////////////////// filter
 
-const data = [2, 26, 38, 75, 11, 29];
+// const data = [2, 26, 38, 75, 11, 29];
 
-const parniBr = data.filter((el) => el % 2 === 0);
-console.log(parniBr);
+// const parniBr = data.filter((el) => el % 2 === 0);
+// console.log(parniBr);
 
-const words = ["televizor", "daljinski", "telefon", "voda", "ranac", "stolica"];
+// const words = ["televizor", "daljinski", "telefon", "voda", "ranac", "stolica"];
 
-const drugoE = words.filter((el) => el[1] === "e");
-console.log(drugoE);
+// const drugoE = words.filter((el) => el[1] === "e");
+// console.log(drugoE);
 
-const sestChar = words.filter((el) => el.length <= 6);
-console.log(sestChar);
+// const sestChar = words.filter((el) => el.length <= 6);
+// console.log(sestChar);
 
-const boolean = data.map((el) => el % 2 === 0);
-console.log(boolean);
+// const boolean = data.map((el) => el % 2 === 0);
+// console.log(boolean);
 
-const noviDo50 = (arr) => {
-  let niz = arr.filter((el) => el < 50 && el % 2 === 0);
+// const noviDo50 = (arr) => {
+//   let niz = arr.filter((el) => el < 50 && el % 2 === 0);
 
-  return niz;
-};
+//   return niz;
+// };
 
-const brojevi = [1, 2, 32, 41, 666, 4, 5, 54, 65, 34];
+// const brojevi = [1, 2, 32, 41, 666, 4, 5, 54, 65, 34];
 
-const filtered = noviDo50(brojevi);
-console.log(filtered);
+// const filtered = noviDo50(brojevi);
+// console.log(filtered);
+
+//////////////////// reduce
+
+// const numbers = [1, 2, 32, 41, 666, 4, 5, 54, 65, 34];
+
+// const ukupno = numbers.reduce((a, c) => a + c);
+// const prosek = ukupno / numbers.length;
+// console.log(ukupno);
+// console.log(prosek);
+
+// const miles = [1, 2, 32, 41, 666, 4, 5, 54, 65, 34];
+
+// const km = miles.map((el) => el * 1.6);
+// console.log(km);
+
+// const totalKm = km.reduce((a, c) => a + c);
+// console.log(totalKm);
+
+// const sumParnih = numbers.reduce((a, c) => {
+//   if (c % 2 === 0) {
+//     return a + c;
+//   }
+//   return a;
+// });
+
+// console.log(sumParnih);
+// //parne pomnozi ih sa 2  i saberi samo njih, map, filter i reduce
+
+// const randomNumbers = [1, 2, 32, 41, 666, 4, 5, 54, 65, 34];
+
+// const uradjen = randomNumbers.reduce((a, c) => {
+//   if (c % 2 === 0) {
+//     return a + c * 2;
+//   }
+//   return a;
+// }, 0);
+
+// console.log(uradjen);
