@@ -141,30 +141,59 @@
 
 ////////////////////////////////////////////
 
-const classAges = [17, 17, 16, 21, 23, 16, 25, 20];
+// const classAges = [17, 17, 16, 21, 23, 16, 25, 20];
 
-const prosek = classAges.reduce((a, c) => a + c);
-// console.log(prosek / classAges.length);
+// const prosek = classAges.reduce((a, c) => a + c);
+// // console.log(prosek / classAges.length);
 
-const miles = [502.8, 120.5, 350.6, 205.2, 100, 98, 115, 9000, 53];
+// const miles = [502.8, 120.5, 350.6, 205.2, 100, 98, 115, 9000, 53];
 
-const km = miles.map((el) => el * 1.6);
-console.log(km);
-const avg = km.reduce((a, c) => a + c);
-console.log(avg);
-const prosecean = avg / miles.length;
-console.log(prosecean);
+// const km = miles.map((el) => el * 1.6);
+// console.log(km);
+// const avg = km.reduce((a, c) => a + c);
+// console.log(avg);
+// const prosecean = avg / miles.length;
+// console.log(prosecean);
 
-///////////////////////////////////
+// ///////////////////////////////////
 
-const mama = "MAMA ima momu";
+// const mama = "MAMA ima momu";
 
-let brojMova = 0;
+// let brojMova = 0;
 
-for (let i = 0; i < mama.length; i++) {
-  if (mama[i] === "M" || mama[i] === "m") {
-    brojMova++;
-  }
-}
+// for (let i = 0; i < mama.length; i++) {
+//   if (mama[i] === "M" || mama[i] === "m") {
+//     brojMova++;
+//   }
+// }
 
-console.log(brojMova);
+// console.log(brojMova);
+
+/////////////////////////////// map zadaci
+//1)
+
+// const DATA1 = [2, 26, 38, 75, 11, 29];
+// const DATA2 = ["a", "b", "c", "d", "e"];
+
+// const spojNizova = (arr1, arr2) => {
+//   let combo = arr1.concat(arr2);
+//   let parni = [];
+//   combo.map((el) => {
+//     if (el % 2 === 0) {
+//       parni.push(el);
+//     }
+//   });
+
+//   parni.unshift(10, 20);
+
+//   return [combo, parni];
+// };
+
+// const result = spojNizova(DATA1, DATA2);
+// console.log(result);
+
+// const comboNiz = result[0];
+// console.log(comboNiz);
+
+// const parniNiz = result[1];
+// console.log(parniNiz);
