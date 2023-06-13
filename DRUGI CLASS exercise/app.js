@@ -214,28 +214,57 @@
 
 // console.log(kvadrat2);
 
-const noviNIz = (arr) => {
-  let novi = [];
+// const noviNIz = (arr) => {
+//   let novi = [];
 
-  arr.map((el) => {
-    if (el > 2 && el < 8) {
-      novi.push((el * 4) / 2);
-    } else if (el > 2) {
-      novi.push(el * 7);
-    } else {
-      novi.push(el);
-    }
-  });
+//   arr.map((el) => {
+//     if (el > 2 && el < 8) {
+//       novi.push((el * 4) / 2);
+//     } else if (el > 2) {
+//       novi.push(el * 7);
+//     } else {
+//       novi.push(el);
+//     }
+//   });
 
-  let ispodTen = [];
+//   let ispodTen = [];
 
-  novi.map((el) => (el < 10 ? ispodTen.push(el) : el));
+//   novi.map((el) => (el < 10 ? ispodTen.push(el) : el));
 
-  return ispodTen;
+//   return ispodTen;
+// };
+
+// const random = [1, 2, 3, 44, 33, 54, 666, 43];
+
+// const uradjeni = noviNIz(random);
+
+// console.log(uradjeni);
+
+//////////////////////////////// filter
+
+const data = [2, 26, 38, 75, 11, 29];
+
+const parniBr = data.filter((el) => el % 2 === 0);
+console.log(parniBr);
+
+const words = ["televizor", "daljinski", "telefon", "voda", "ranac", "stolica"];
+
+const drugoE = words.filter((el) => el[1] === "e");
+console.log(drugoE);
+
+const sestChar = words.filter((el) => el.length <= 6);
+console.log(sestChar);
+
+const boolean = data.map((el) => el % 2 === 0);
+console.log(boolean);
+
+const noviDo50 = (arr) => {
+  let niz = arr.filter((el) => el < 50 && el % 2 === 0);
+
+  return niz;
 };
 
-const random = [1, 2, 3, 44, 33, 54, 666, 43];
+const brojevi = [1, 2, 32, 41, 666, 4, 5, 54, 65, 34];
 
-const uradjeni = noviNIz(random);
-
-console.log(uradjeni);
+const filtered = noviDo50(brojevi);
+console.log(filtered);
