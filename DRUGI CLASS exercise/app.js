@@ -197,3 +197,10 @@
 
 // const parniNiz = result[1];
 // console.log(parniNiz);
+
+//2)
+
+const numbers2 = [2, 5, 10, 3, 4, 8];
+
+const kvadrat = numbers2.map((el) => el * el);
+console.log(kvadrat);
