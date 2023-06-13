@@ -200,7 +200,42 @@
 
 //2)
 
-const numbers2 = [2, 5, 10, 3, 4, 8];
+// const numbers2 = [2, 5, 10, 3, 4, 8];
 
-const kvadrat = numbers2.map((el) => el * el);
-console.log(kvadrat);
+// const kvadrat = numbers2.map((el) => el * el);
+// console.log(kvadrat);
+
+// const koren = numbers2.map((el) => Math.sqrt(el));
+// console.log(koren);
+
+// const kvadrat2 = numbers2.map((el, i) =>
+//   i === 0 || i === 3 || i === 5 ? el * el : el
+// );
+
+// console.log(kvadrat2);
+
+const noviNIz = (arr) => {
+  let novi = [];
+
+  arr.map((el) => {
+    if (el > 2 && el < 8) {
+      novi.push((el * 4) / 2);
+    } else if (el > 2) {
+      novi.push(el * 7);
+    } else {
+      novi.push(el);
+    }
+  });
+
+  let ispodTen = [];
+
+  novi.map((el) => (el < 10 ? ispodTen.push(el) : el));
+
+  return ispodTen;
+};
+
+const random = [1, 2, 3, 44, 33, 54, 666, 43];
+
+const uradjeni = noviNIz(random);
+
+console.log(uradjeni);
