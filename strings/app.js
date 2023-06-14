@@ -185,11 +185,87 @@
 // Npr. za string 'Pera ima devojku', N=6 i M=7,
 //dobija se B='ima dev'.
 
-let A = "Pera ima devojku";
+// let A = "Pera ima devojku";
 
-function dvaBroja(a, b, niz) {
-  let B = niz.slice(a, a + b);
-  return B;
+// function dvaBroja(a, b, niz) {
+//   let B = niz.slice(a, a + b);
+//   return B;
+// }
+
+// console.log(dvaBroja(6, 7, A));
+
+//13) 13.	Unosi se string A i znak Z.
+//Kreirati novi string B koji se dobija tako što se iz unetog
+//stringa izbacuje svaka pojava znaka Z.
+//Npr. za unet string "Madagaskar" i znak "a",
+//dobijamo rezultat "Mdgskr"
+
+// let A = "Madagaskar";
+
+// function izbaciSlovo(slovo, niz) {
+//   let B = niz.split("");
+//   for (let i = 0; i < B.length; i++) {
+//     if (B[i] === slovo) {
+//       B.splice(i, 1);
+//     }
+//   }
+
+//   return B;
+// }
+
+// console.log(izbaciSlovo("a", A));
+
+//14) 14.	Uneti string se šifruje tako što se zamenjuje redosled
+// znacima u stringu. Prvi i drugi zamene mesta, zatim 3. i 4.
+// zamene mesta itd. Npr. za string 'Pera ima devojku',
+//treba dobiti 'ePari amd vejouk'. Ako string ima neparan broj
+// znakova, poslednji znak se ne dira.
+
+function sifrujString(unetiString) {
+  let rezultat = "";
+  let n = Math.floor(unetiString.length / 2);
+
+  for (let i = 0; i < n; i++) {
+    rezultat += unetiString[2 * i + 1] + unetiString[2 * i];
+  }
+
+  if (unetiString.length % 2 !== 0) {
+    rezultat += unetiString[unetiString.length - 1];
+  }
+
+  return rezultat;
 }
 
-console.log(dvaBroja(6, 7, A));
+let unetiString = "Pera ima devojku";
+let sifrovanString = sifrujString(unetiString);
+console.log(sifrovanString);
+
+//15) 15.	Unose se dva stringa A i B. Kreirati novi string
+// kao kombinaciju stringova A i B, tako što se kombinuju prvi
+//sa prvim, drugi sa drugim, treći sa trećim znakom itd.
+//Ako je jedan string duži od drugog, na kraju samo dodati
+//znakove viška. Npr. za stringove "PERA" i "sladoled" dobija
+//se string "PsElRaAdoled".
+
+function kombinujStringove(stringA, stringB) {
+  let rezultat = "";
+  let duzinaA = stringA.length;
+  let duzinaB = stringB.length;
+  let duzinaMax = Math.max(duzinaA, duzinaB);
+
+  for (let i = 0; i < duzinaMax; i++) {
+    if (i < duzinaA) {
+      rezultat += stringA[i];
+    }
+    if (i < duzinaB) {
+      rezultat += stringB[i];
+    }
+  }
+
+  return rezultat;
+}
+
+let stringA = "PERA";
+let stringB = "sladoled";
+let kombinovaniString = kombinujStringove(stringA, stringB);
+console.log(kombinovaniString);
