@@ -134,3 +134,50 @@
 // let sastav = recenica.split(" ");
 // let brojChar = sastav[0].length;
 // console.log(brojChar);
+
+//9)9.	Za uneti string A treba kreirati novi string B
+// koji se sastoji od prve i poslednje reči
+//(odvojenih razmakom) unetog stringa.
+//Npr. za A='Svuda pođi, kući dođi',
+//dobija se B='Svuda dođi'. Podrazumeva se da uneti
+// string nema vodeće ili prateće razmake.
+
+// let A = "Svuda pođi, kući dođi";
+// let spacedA = A.split(" ");
+// let novi = `${spacedA[0]} ${spacedA[spacedA.length - 1]}`;
+// console.log(novi);
+
+//10) 10.	Iz unetog stringa treba izdvojiti N znakova sa leve
+// strane. Npr. za string 'Pera ima devojku' i N=6,
+// dobija se 'Pera i'. Ako je N veće od dužine stringa,
+// kao rezultat se dobija ceo string.
+
+// let pera = "Pera ima devojku";
+
+// function brojKaraktera(broj, nekiString) {
+//   let noviString = nekiString.split("");
+//   if (broj > noviString.length) {
+//     return nekiString;
+//   } else {
+//     return noviString.slice(0, broj).join("");
+//   }
+// }
+
+// console.log(brojKaraktera(2, pera));
+
+//11) 11.	Izdvojiti N znakova sa desne strane
+//(poslednjih N znakova) unetog stringa.
+//Npr. za string 'Pera ima devojku' i N=5, dobija se 'vojku'.
+
+let pera = "Pera ima devojku";
+
+function brojKaraktera(broj, nekiString) {
+  let noviString = nekiString.split("");
+  if (broj > noviString.length) {
+    return nekiString;
+  } else {
+    return noviString.slice(-broj).join("");
+  }
+}
+
+console.log(brojKaraktera(5, pera));
