@@ -99,3 +99,8 @@ let counterMalih = 0;
 //     }
 //   }
 // }
+
+//6) sve mala slova
+
+let varijabla = "WEBnSTUDY.com";
+console.log(varijabla.toLowerCase());
