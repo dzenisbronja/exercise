@@ -155,29 +155,41 @@
 // let pera = "Pera ima devojku";
 
 // function brojKaraktera(broj, nekiString) {
-//   let noviString = nekiString.split("");
-//   if (broj > noviString.length) {
+//   if (broj > nekiString.length) {
 //     return nekiString;
 //   } else {
-//     return noviString.slice(0, broj).join("");
+//     return nekiString.slice(0, broj);
 //   }
 // }
 
-// console.log(brojKaraktera(2, pera));
+// console.log(brojKaraktera(3, pera));
 
 //11) 11.	Izdvojiti N znakova sa desne strane
 //(poslednjih N znakova) unetog stringa.
 //Npr. za string 'Pera ima devojku' i N=5, dobija se 'vojku'.
 
-let pera = "Pera ima devojku";
+// let pera = "Pera ima devojku";
 
-function brojKaraktera(broj, nekiString) {
-  let noviString = nekiString.split("");
-  if (broj > noviString.length) {
-    return nekiString;
-  } else {
-    return noviString.slice(-broj).join("");
-  }
+// function brojKaraktera(broj, nekiString) {
+//   if (broj > nekiString.length) {
+//     return nekiString;
+//   } else {
+//     return nekiString.slice(-broj);
+//   }
+// }
+
+// console.log(brojKaraktera(5, pera));
+
+//12) 12.	Za uneti string A, treba izdvojiti podstring B,
+// koji počinje od unete pozicije N i ima M znakova.
+// Npr. za string 'Pera ima devojku', N=6 i M=7,
+//dobija se B='ima dev'.
+
+let A = "Pera ima devojku";
+
+function dvaBroja(a, b, niz) {
+  let B = niz.slice(a, a + b);
+  return B;
 }
 
-console.log(brojKaraktera(5, pera));
+console.log(dvaBroja(6, 7, A));
