@@ -306,3 +306,22 @@
 // }, 0);
 
 // console.log(uradjen);
+
+///////////////////////////////////////strings
+
+function brkanje(nekiString) {
+  let result = "";
+  brojOkretanja = Math.floor(nekiString.length / 2);
+
+  for (let i = 0; i < brojOkretanja; i++) {
+    result += nekiString[2 * i + 1] + nekiString[2 * i];
+  }
+
+  if (nekiString.length !== 0) {
+    result += nekiString[nekiString.length / 2];
+  }
+  return result;
+}
+
+let ime = "Spajdermen";
+console.log(brkanje(ime));
