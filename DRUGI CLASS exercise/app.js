@@ -330,6 +330,30 @@
 
 //combo 2 stringa
 
+// function combo(prvi, drugi) {
+//   let result = "";
+//   let duzinaPrvi = prvi.length;
+//   let duzinaDrugi = drugi.length;
+//   let duzinaMax = Math.max(duzinaPrvi, duzinaDrugi);
+
+//   for (let i = 0; i < duzinaMax; i++) {
+//     if (duzinaPrvi > i) {
+//       result += prvi[i];
+//     }
+//     if (duzinaDrugi > i) {
+//       result += drugi[i];
+//     }
+//   }
+//   return result;
+// }
+
+// let a = "Med";
+// let b = "Krevet";
+
+// console.log(combo(a, b));
+
+//
+
 function combo(prvi, drugi) {
   let result = "";
   let duzinaPrvi = prvi.length;
@@ -344,7 +368,17 @@ function combo(prvi, drugi) {
       result += drugi[i];
     }
   }
-  return result;
+
+  let brojOkretanja = Math.floor(result.length / 4);
+
+  for (let i = 0; i < brojOkretanja - 1; i++) {
+    result += result[2 * i + 1] + result[2 * i];
+  }
+
+  if (result.length % 2 !== 0) {
+    result += result[result.length - 1];
+  }
+  return result.split("").reverse().join("");
 }
 
 let a = "Med";
