@@ -308,20 +308,46 @@
 // console.log(uradjen);
 
 ///////////////////////////////////////strings
+//a)
+// function brkanje(nekiString) {
+//   let result = "";
+//   let brojOkretanja = Math.floor(nekiString.length / 2);
 
-function brkanje(nekiString) {
+//   for (let i = 0; i < brojOkretanja; i++) {
+//     result += nekiString[2 * i + 1] + nekiString[2 * i];
+//   }
+
+//   if (nekiString.length % 2 !== 0) {
+//     result += nekiString[nekiString.length - 1];
+//   }
+//   return result;
+// }
+
+// let ime = "Spajdermeni";
+// console.log(brkanje(ime));
+
+// console.log(Math.ceil(6.0022));//7
+
+//combo 2 stringa
+
+function combo(prvi, drugi) {
   let result = "";
-  brojOkretanja = Math.floor(nekiString.length / 2);
+  let duzinaPrvi = prvi.length;
+  let duzinaDrugi = drugi.length;
+  let duzinaMax = Math.max(duzinaPrvi, duzinaDrugi);
 
-  for (let i = 0; i < brojOkretanja; i++) {
-    result += nekiString[2 * i + 1] + nekiString[2 * i];
-  }
-
-  if (nekiString.length !== 0) {
-    result += nekiString[nekiString.length / 2];
+  for (let i = 0; i < duzinaMax; i++) {
+    if (duzinaPrvi > i) {
+      result += prvi[i];
+    }
+    if (duzinaDrugi > i) {
+      result += drugi[i];
+    }
   }
   return result;
 }
 
-let ime = "Spajdermen";
-console.log(brkanje(ime));
+let a = "Med";
+let b = "Krevet";
+
+console.log(combo(a, b));
