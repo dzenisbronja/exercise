@@ -34,3 +34,9 @@ ul.append(li);
 li.innerText = "X-men";
 
 // MODIFYING ATRRIBUTES & CLASSES
+
+li.setAttribute("id", "main-heading");
+// prvo ide koji atribut dodajemo, drugo je njegovo ime, dodavsi mu ime po kome
+// su neki elementi uredjeni, on ce poprimiti njihovo stilizovanje
+li.removeAttribute("id");
+//ovako se uklanja atribut
