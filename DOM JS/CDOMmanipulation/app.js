@@ -15,7 +15,7 @@
 
 // CHILD NODE TRAVERSAL
 
-let ul = document.querySelector("ul");
+// let ul = document.querySelector("ul");
 
 // console.log(ul.childNodes);
 // //vraca node listu od 11, jer broji razmake, ako obrsemo neki razmak smanjice se lista
@@ -29,12 +29,23 @@ let ul = document.querySelector("ul");
 // ul.childNodes[1].style.color = "red";
 // //ovako smo preko index-a child node-a pristupili elementu i stilizovali ga
 
-console.log(ul.children);
-// ovako se pristupa direktno i samo elementimas i vraca HTML colekcijiu
-console.log(ul.firstElementChild);
-console.log(ul.lastElementChild);
+// console.log(ul.children);
+// // ovako se pristupa direktno i samo elementimas i vraca HTML colekcijiu
+// console.log(ul.firstElementChild);
+// console.log(ul.lastElementChild);
 
-ul.lastElementChild.style.backgroundColor = "blue";
-//ovde se moze direktno raditi, jer kao vrednost vraca element
+// ul.lastElementChild.style.backgroundColor = "blue";
+// //ovde se moze direktno raditi, jer kao vrednost vraca element
 
 // SIBLING NODE TRAVERSAL
+
+let ul = document.querySelector("ul");
+const div = document.querySelector("div");
+
+// console.log(div.childNodes);
+
+console.log(ul.previousSibling); //vraca prethodnog siblinga node-u, ali vrednost #text
+console.log(ul.nextSibling); //vraca sledeceg siblingau node-u, ali vrednost #text
+
+console.log(ul.previousElementSibling); // vraca samo element prethodni
+console.log(ul.nextElementSibling); // vraca samo element sledeci (ovde je null jer nema)
