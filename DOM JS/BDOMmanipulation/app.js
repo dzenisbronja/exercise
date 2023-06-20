@@ -35,8 +35,23 @@ li.innerText = "X-men";
 
 // MODIFYING ATRRIBUTES & CLASSES
 
-li.setAttribute("id", "main-heading");
-// prvo ide koji atribut dodajemo, drugo je njegovo ime, dodavsi mu ime po kome
-// su neki elementi uredjeni, on ce poprimiti njihovo stilizovanje
-li.removeAttribute("id");
-//ovako se uklanja atribut
+// li.setAttribute("id", "main-heading");
+// // prvo ide koji atribut dodajemo, drugo je njegovo ime, dodavsi mu ime po kome
+// // su neki elementi uredjeni, on ce poprimiti njihovo stilizovanje
+// li.removeAttribute("id");
+// //ovako se uklanja atribut
+
+// const title = document.querySelector("#main-heading");
+// console.log(title.getAttribute("id")); //ovako dobijamo ime atributa / id-a
+
+li.classList.add("list-items");
+//ovako mu dodajemo classu, opet, ako je ista neki postojecim, poprimice stil
+
+li.classList.remove("list-items"); //uklanja classu
+
+console.log(li.classList.contains("list-items"));
+// proverava da li ima neku trazenu classu i vraca boolean
+
+//REMOVE ELEMENTS
+
+li.remove();
