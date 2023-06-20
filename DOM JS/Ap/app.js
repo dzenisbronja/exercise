@@ -32,3 +32,5 @@ ul.append(li);
 // console.log(firstListItem.innerHTML); // kao content, ali sa tags, NE KORISTITI, SECURITY reasons
 
 li.innerText = "X-men";
+
+// MODIFYING ATRRIBUTES & CLASSES
