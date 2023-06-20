@@ -28,3 +28,5 @@ console.log(listItem);
 
 const container = document.querySelectorAll("div");
 console.log(container);
+
+//preporuka querySelector and -||-All
