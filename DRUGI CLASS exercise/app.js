@@ -370,3 +370,18 @@
 //////////////////////////////////////////////////////////////////////////////
 
 const array = [3, 4, 4, 54, 23, 22, 33, 445];
+
+let sum = 0;
+
+for (let i = 0; i < array.length; i++) {
+  sum += array[i];
+}
+console.log(sum);
+
+const newArray = [];
+for (let i = 0; i < array.length; i++) {
+  if (array[i] / array[i] === 0 && array[i] / 1 === array[i]) {
+    newArray.push(array[i]);
+  }
+}
+console.log(newArray);
