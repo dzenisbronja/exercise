@@ -352,36 +352,21 @@
 
 // console.log(combo(a, b));
 
-//
+///////////////// dodaj novi elemen u nizu sa brojem automobila
 
-function combo(prvi, drugi) {
-  let result = "";
-  let duzinaPrvi = prvi.length;
-  let duzinaDrugi = drugi.length;
-  let duzinaMax = Math.max(duzinaPrvi, duzinaDrugi);
+// const automobili = {
+//   ja: ["vw", "audi", "cayenne", "targa"],
+//   tajra: ["golf", "audi", "bmw"],
+//   iman: ["peugeot", "fiat", "citroen", "x5"],
+//   bronja: ["pagani", "mclaren", "rollce roys"],
+// };
 
-  for (let i = 0; i < duzinaMax; i++) {
-    if (duzinaPrvi > i) {
-      result += prvi[i];
-    }
-    if (duzinaDrugi > i) {
-      result += drugi[i];
-    }
-  }
+// let niz = Object.values(automobili);
+// console.log(niz);
 
-  let brojOkretanja = Math.floor(result.length / 4);
+// let noviNiz = niz.map((el) => [...el, el.length]);
+// console.log(noviNiz);
 
-  for (let i = 0; i < brojOkretanja - 1; i++) {
-    result += result[2 * i + 1] + result[2 * i];
-  }
+//////////////////////////////////////////////////////////////////////////////
 
-  if (result.length % 2 !== 0) {
-    result += result[result.length - 1];
-  }
-  return result.split("").reverse().join("");
-}
-
-let a = "Med";
-let b = "Krevet";
-
-console.log(combo(a, b));
+const array = [3, 4, 4, 54, 23, 22, 33, 445];
