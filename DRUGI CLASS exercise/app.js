@@ -424,3 +424,18 @@ ownersEatTooLittle.forEach((el) => {
 
 const help = dogs.map((el) => el.curFood === el.recommendedFood);
 console.log(help);
+
+// 6)
+
+const ok = dogs.map((el) => el.curFood >= el.recommendedFood);
+console.log(ok);
+
+// 7)
+
+const okDogs = dogs.filter((el) => {
+  return el.curFood >= el.recommendedFood;
+});
+
+console.log(okDogs);
+
+// 8)
