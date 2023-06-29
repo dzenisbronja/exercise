@@ -424,12 +424,3 @@ ownersEatTooLittle.forEach((el) => {
 
 const help = dogs.map((el) => el.curFood === el.recommendedFood);
 console.log(help);
-
-// 6)
-const ok = dogs.map((el) => el.curFood - el.recommendedFood <= el.curFood / 10);
-console.log(ok);
-
-const ok2 = dogs.map(
-  (el) => el.curFood - el.recommendedFood >= el.curFood / 10
-);
-console.log(ok2);
