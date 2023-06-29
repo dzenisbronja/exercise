@@ -439,3 +439,8 @@ const okDogs = dogs.filter((el) => {
 console.log(okDogs);
 
 // 8)
+
+const newShallow = dogs
+  .slice()
+  .sort((a, b) => b.recommendedFood - a.recommendedFood);
+console.log(newShallow);
