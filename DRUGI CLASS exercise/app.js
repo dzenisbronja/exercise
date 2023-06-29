@@ -401,3 +401,28 @@ if (sarahsDog.curFood > sarahsDog.recommendedFood) {
 }
 
 // 3) array with owners whos dogs eat too much and one for too little
+
+const ownersEatTooMuch = dogs
+  .filter((dog) => dog.curFood > dog.recommendedFood)
+  .map((dog) => dog.owners);
+
+console.log(ownersEatTooMuch);
+
+const ownersEatTooLittle = dogs
+  .filter((dog) => dog.curFood < dog.recommendedFood)
+  .map((dog) => dog.owners);
+
+console.log(ownersEatTooLittle);
+
+// 4)
+
+ownersEatTooLittle.forEach((el) => {
+  el.forEach((el) => console.log(el + " eat too much"));
+});
+
+// 5)
+
+const help = dogs.map((el) => el.curFood === el.recommendedFood);
+console.log(help);
+
+// 6)
