@@ -369,19 +369,21 @@
 
 //////////////////////////////////////////////////////////////////////////////
 
-const array = [3, 4, 4, 54, 23, 22, 33, 445];
+const dogs = [
+  { weigth: 22, curFood: 250, owners: ["Alice, Bob"] },
+  { weigth: 8, curFood: 200, owners: ["Matilda"] },
+  { weigth: 13, curFood: 275, owners: ["Sarah, John"] },
+  { weigth: 32, curFood: 340, owners: ["Michael"] },
+];
 
-let sum = 0;
+//recommendedFood (portion) as new property
+// formula
+// weigth ** 0.75 * 28 (result is in grams of food, and the weigth needs to be in kg)
 
-for (let i = 0; i < array.length; i++) {
-  sum += array[i];
-}
-console.log(sum);
+dogs.forEach((el) => {
+  el.recommendedFood = parseInt(el.weigth ** 0.75 * 28);
+});
 
-const newArray = [];
-for (let i = 0; i < array.length; i++) {
-  if (array[i] / array[i] === 0 && array[i] / 1 === array[i]) {
-    newArray.push(array[i]);
-  }
-}
-console.log(newArray);
+console.log(dogs);
+
+// log if sarahs dog eats too much or little food
