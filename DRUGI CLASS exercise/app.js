@@ -468,3 +468,15 @@
 // }
 
 // console.log(sum2);
+
+//////////////////////////////////////////////////
+
+const array = [1, 23, 445, 56];
+
+for (const key in array) {
+  console.log(array[key]);
+}
+
+for (const iterator of array) {
+  console.log(iterator);
+}
