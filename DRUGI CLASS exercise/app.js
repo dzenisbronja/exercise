@@ -480,3 +480,14 @@ for (const key in array) {
 for (const iterator of array) {
   console.log(iterator);
 }
+
+const object = {
+  name: "saladin",
+  lastName: "veliki",
+  address: "oslobodjenja",
+  profession: "mehanic",
+};
+
+for (const key in object) {
+  console.log(object[key]);
+}
