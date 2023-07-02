@@ -452,3 +452,6 @@ let matrix = [
   [2, 4, 6],
   [6, 8, 9],
 ];
+
+let sum = 0;
+for (let i = 0; i < matrix.length; i++) {}
