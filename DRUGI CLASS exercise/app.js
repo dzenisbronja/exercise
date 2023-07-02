@@ -447,16 +447,24 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
-let matrix = [
-  [1, 3, 5],
-  [2, 4, 6],
-  [6, 8, 9],
-];
+// let matrix = [
+//   [1, 3, 5],
+//   [2, 4, 6],
+//   [6, 8, 9],
+// ];
 
-let sum = 0;
+// let sum = 0;
 
-for (let i = 0; i < matrix.length; i++) {
-  sum += matrix[i][i];
-}
+// for (let i = 0; i < matrix.length; i++) {
+//   sum += matrix[i][i];
+// }
 
-console.log(sum);
+// console.log(sum);
+
+// let sum2 = 0;
+
+// for (let i = 0; i < matrix.length; i++) {
+//   sum2 += matrix[i][matrix.length - 1 - i];
+// }
+
+// console.log(sum2);
