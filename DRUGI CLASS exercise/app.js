@@ -454,4 +454,9 @@ let matrix = [
 ];
 
 let sum = 0;
-for (let i = 0; i < matrix.length; i++) {}
+
+for (let i = 0; i < matrix.length; i++) {
+  sum += matrix[i][i];
+}
+
+console.log(sum);
