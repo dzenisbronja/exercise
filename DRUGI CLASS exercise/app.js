@@ -369,78 +369,86 @@
 
 //////////////////////////////////////////////////////////////////////////////
 
-const dogs = [
-  { weigth: 22, curFood: 250, owners: ["Alice", "Bob"] },
-  { weigth: 8, curFood: 200, owners: ["Matilda"] },
-  { weigth: 13, curFood: 275, owners: ["Sarah", "John"] },
-  { weigth: 32, curFood: 340, owners: ["Michael"] },
+// const dogs = [
+//   { weigth: 22, curFood: 250, owners: ["Alice", "Bob"] },
+//   { weigth: 8, curFood: 200, owners: ["Matilda"] },
+//   { weigth: 13, curFood: 275, owners: ["Sarah", "John"] },
+//   { weigth: 32, curFood: 340, owners: ["Michael"] },
+// ];
+
+// // 1) recommendedFood (portion) as new property
+// // formula
+// // weigth ** 0.75 * 28 (result is in grams of food, and the weigth needs to be in kg)
+
+// dogs.forEach((el) => {
+//   el.recommendedFood = parseInt(el.weigth ** 0.75 * 28);
+// });
+
+// console.log(dogs);
+
+// // 2) log if sarahs dog eats too much or little food
+
+// const sarahsDog = dogs.filter((el) => {
+//   return el.owners.includes("Sarah");
+// });
+
+// console.log(sarahsDog);
+
+// if (sarahsDog.curFood > sarahsDog.recommendedFood) {
+//   console.log("this dog eats too little");
+// } else {
+//   console.log("this dog eats too much");
+// }
+
+// // 3) array with owners whos dogs eat too much and one for too little
+
+// const ownersEatTooMuch = dogs
+//   .filter((dog) => dog.curFood > dog.recommendedFood)
+//   .map((dog) => dog.owners);
+
+// console.log(ownersEatTooMuch);
+
+// const ownersEatTooLittle = dogs
+//   .filter((dog) => dog.curFood < dog.recommendedFood)
+//   .map((dog) => dog.owners);
+
+// console.log(ownersEatTooLittle);
+
+// // 4)
+
+// ownersEatTooLittle.forEach((el) => {
+//   el.forEach((el) => console.log(el + " eat too much"));
+// });
+
+// // 5)
+
+// const help = dogs.map((el) => el.curFood === el.recommendedFood);
+// console.log(help);
+
+// // 6)
+
+// const ok = dogs.map((el) => el.curFood >= el.recommendedFood);
+// console.log(ok);
+
+// // 7)
+
+// const okDogs = dogs.filter((el) => {
+//   return el.curFood >= el.recommendedFood;
+// });
+
+// console.log(okDogs);
+
+// // 8)
+
+// const newShallow = dogs
+//   .slice()
+//   .sort((a, b) => b.recommendedFood - a.recommendedFood);
+// console.log(newShallow);
+
+///////////////////////////////////////////////////////////////////////////////
+
+let matrix = [
+  [1, 3, 5],
+  [2, 4, 6],
+  [6, 8, 9],
 ];
-
-// 1) recommendedFood (portion) as new property
-// formula
-// weigth ** 0.75 * 28 (result is in grams of food, and the weigth needs to be in kg)
-
-dogs.forEach((el) => {
-  el.recommendedFood = parseInt(el.weigth ** 0.75 * 28);
-});
-
-console.log(dogs);
-
-// 2) log if sarahs dog eats too much or little food
-
-const sarahsDog = dogs.filter((el) => {
-  return el.owners.includes("Sarah");
-});
-
-console.log(sarahsDog);
-
-if (sarahsDog.curFood > sarahsDog.recommendedFood) {
-  console.log("this dog eats too little");
-} else {
-  console.log("this dog eats too much");
-}
-
-// 3) array with owners whos dogs eat too much and one for too little
-
-const ownersEatTooMuch = dogs
-  .filter((dog) => dog.curFood > dog.recommendedFood)
-  .map((dog) => dog.owners);
-
-console.log(ownersEatTooMuch);
-
-const ownersEatTooLittle = dogs
-  .filter((dog) => dog.curFood < dog.recommendedFood)
-  .map((dog) => dog.owners);
-
-console.log(ownersEatTooLittle);
-
-// 4)
-
-ownersEatTooLittle.forEach((el) => {
-  el.forEach((el) => console.log(el + " eat too much"));
-});
-
-// 5)
-
-const help = dogs.map((el) => el.curFood === el.recommendedFood);
-console.log(help);
-
-// 6)
-
-const ok = dogs.map((el) => el.curFood >= el.recommendedFood);
-console.log(ok);
-
-// 7)
-
-const okDogs = dogs.filter((el) => {
-  return el.curFood >= el.recommendedFood;
-});
-
-console.log(okDogs);
-
-// 8)
-
-const newShallow = dogs
-  .slice()
-  .sort((a, b) => b.recommendedFood - a.recommendedFood);
-console.log(newShallow);
