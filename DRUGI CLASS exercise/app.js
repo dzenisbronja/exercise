@@ -552,3 +552,44 @@
 // console.log(secondD);
 
 ////////////////////////////
+// a)
+
+// const array = [1, 22, 3, 44, 211, 2, 332, 4, 55, 344, 22];
+// let sum = 0;
+
+// for (let i = 0; i < array.length; i++) {
+//   newArray = [array[i], array[i + 1], array[i + 2]];
+//   let currentSum = newArray[0] + newArray[1] + newArray[2];
+
+//   // let currentSum = newArray.reduce((a, c) => a + c, 0);
+
+//   // let currentSum = 0;
+//   // for (let i = 0; i < newArray.length; i++) {
+//   //   currentSum += newArray[i];
+//   // }
+
+//   if (currentSum > sum) {
+//     sum = currentSum;
+//   }
+// }
+
+// console.log(sum);
+
+// b)
+
+// const array = [1, 22, 3, 44, 211, 2, 332, 4, 55, 344, 22];
+// let sum = 0;
+// let indexes = [];
+
+// for (let i = 0; i < array.length; i++) {
+//   let newArray = [array[i], array[i + 1], array[i + 2]];
+//   let currentSum = newArray[0] + newArray[1] + newArray[2];
+
+//   if (currentSum > sum) {
+//     sum = currentSum;
+//     indexes = [i, i + 1, i + 2];
+//   }
+// }
+
+// console.log(sum);
+// console.log(indexes);
