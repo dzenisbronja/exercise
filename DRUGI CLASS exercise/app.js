@@ -471,23 +471,23 @@
 
 //////////////////////////////////////////////////
 
-const array = [1, 23, 445, 56];
+// const array = [1, 23, 445, 56];
 
-for (const key in array) {
-  console.log(array[key]);
-}
+// for (const key in array) {
+//   console.log(array[key]);
+// }
 
-for (const iterator of array) {
-  console.log(iterator);
-}
+// for (const iterator of array) {
+//   console.log(iterator);
+// }
 
-const object = {
-  name: "saladin",
-  lastName: "veliki",
-  address: "oslobodjenja",
-  profession: "mehanic",
-};
+// const object = {
+//   name: "saladin",
+//   lastName: "veliki",
+//   address: "oslobodjenja",
+//   profession: "mehanic",
+// };
 
-for (const key in object) {
-  console.log(object[key]);
-}
+// for (const key in object) {
+//   console.log(object[key]);
+// }
