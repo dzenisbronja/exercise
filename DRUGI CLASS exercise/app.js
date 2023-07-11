@@ -593,3 +593,29 @@
 
 // console.log(sum);
 // console.log(indexes);
+
+/////////////////
+
+const array = [1, 22, 3, 44, 211, 2, 332, 4, 55, 344, 22];
+
+function valueSumIndexes(value, arr) {
+  let indexes = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      let newArray = [arr[i], arr[j]];
+      let currentValue = newArray[0] + newArray[1];
+
+      if (value === currentValue) {
+        indexes = [i, j];
+      }
+
+      // ako ne stavimo break, vratice poslednju kombinaciju
+      // if (indexes.length > 1) break;
+    }
+  }
+
+  return indexes;
+}
+
+console.log(valueSumIndexes(23, array));
