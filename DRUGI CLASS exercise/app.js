@@ -552,23 +552,3 @@
 // console.log(secondD);
 
 ////////////////////////////
-
-let array = [1, 2, 3, 44, 55, 666, 7, 89, 95, 322, 55, 3];
-
-for (let i = 0; i < array.length - 2; i++) {
-  let newArray = [];
-
-  newArray.push(array[i] + array[i + 1] + array[i + 2]);
-
-  newArray = newArray.flat();
-
-  let sum = newArray[0];
-
-  // for (let j = 1; j < newArray.length; j++) {
-  //   if (sum < newArray[j]) {
-  //     sum = newArray[j];
-  //   }
-  // }
-
-  console.log(sum);
-}
