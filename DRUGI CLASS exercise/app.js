@@ -491,3 +491,62 @@
 // for (const key in object) {
 //   console.log(object[key]);
 // }
+
+///////////////////////////////////////////////////////////////
+
+// let threeDArray = [
+//   [
+//     [1, 2, 7],
+//     [4, 5, 6],
+//     [7, 8, 3],
+//   ],
+//   [
+//     [2, 4, 6],
+//     [8, 9, 3],
+//     [5, 7, 1],
+//   ],
+//   [
+//     [9, 8, 7],
+//     [6, 5, 4],
+//     [3, 2, 7],
+//   ],
+// ];
+
+// a) zbir svih dijagonala
+// let firstD = 0;
+
+// for (let i = 0; i < threeDArray.length; i++) {
+//   for (let j = 0; j < threeDArray[i].length; j++) {
+//     firstD += threeDArray[i][j][j];
+//   }
+// }
+
+// console.log(firstD);
+
+// let secondD = 0;
+
+// for (let i = 0; i < threeDArray.length; i++) {
+//   for (let j = 0; j < threeDArray[i].length; j++) {
+//     secondD += threeDArray[i][j][threeDArray.length - 1 - j];
+//   }
+// }
+
+// console.log(secondD);
+
+// b) dijagonalni zbir 3 broja
+
+// let firstD = 0;
+
+// for (let i = 0; i < threeDArray.length; i++) {
+//   firstD += threeDArray[i][i][i];
+// }
+
+// console.log(firstD);
+
+// let secondD = 0;
+
+// for (let i = 0; i < threeDArray.length; i++) {
+//   secondD += threeDArray[i][i][threeDArray.length - 1 - i];
+// }
+
+// console.log(secondD);
