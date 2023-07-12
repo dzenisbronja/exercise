@@ -494,6 +494,79 @@
 
 ///////////////////////////////////////////////////////////////
 
+// niz1 = [
+//   "nesto",
+//   null,
+//   "drugo",
+//   false,
+//   5,
+//   3,
+//   10,
+//   true,
+//   undefined,
+//   undefined,
+//   "plastika",
+//   105,
+//   103.2,
+//   null,
+//   "dva" == "dva",
+//   1001,
+//   [5, 5, 3],
+//   { ime: "dzelal", godine: "koliko ti hoces" },
+//   { ime: "nikola", godine: 26 },
+// ];
+
+// const obj = {};
+
+// for (let i = 0; i < niz1.length; i++) {
+//   let arraysName = typeof niz1[i] + "s";
+
+//   if (!obj.hasOwnProperty(arraysName)) {
+//     obj[arraysName] = [];
+//   }
+
+//   obj[arraysName].push(niz1[i]);
+// }
+
+// console.log(obj);
+
+/////////////////////////////
+
+// let array = [33, 1];
+
+// function fibonachi(value, someArray) {
+//   while (someArray[someArray.length - 1] < value) {
+//     someArray.push(
+//       someArray[someArray.length - 2] + someArray[someArray.length - 1]
+//     );
+//   }
+
+//   if (someArray[someArray.length - 1] > value) {
+//     someArray.pop();
+//   }
+
+//   return someArray;
+// }
+
+// console.log(fibonachi(93, array));
+
+////////////////////////////
+
+// function fibonachi(value) {
+//   let array = [0, 1];
+//   let sum = 0;
+
+//   while (sum < value) {
+//     array.push(array[array.length - 2] + array[array.length - 1]);
+
+//     sum += array[array.length - 2] + array[array.length - 1];
+//   }
+
+//   return array;
+// }
+
+// console.log(fibonachi(200));
+
 // let threeDArray = [
 //   [
 //     [1, 2, 7],
@@ -596,26 +669,52 @@
 
 /////////////////
 
-const array = [1, 22, 3, 44, 211, 2, 332, 4, 55, 344, 22];
+// const array = [1, 22, 3, 44, 211, 2, 332, 4, 55, 344, 22];
 
-function valueSumIndexes(value, arr) {
-  let indexes = [];
+// function valueSumIndexes(value, arr) {
+//   let indexes = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      let newArray = [arr[i], arr[j]];
-      let currentValue = newArray[0] + newArray[1];
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       let newArray = [arr[i], arr[j]];
+//       let currentValue = newArray[0] + newArray[1];
 
-      if (value === currentValue) {
-        indexes = [i, j];
-      }
+//       if (value === currentValue) {
+//         indexes = [i, j];
+//       }
 
-      // ako ne stavimo break, vratice poslednju kombinaciju
-      // if (indexes.length > 1) break;
-    }
-  }
+//       // ako ne stavimo break, vratice poslednju kombinaciju
+//       // if (indexes.length > 1) break;
+//     }
+//   }
 
-  return indexes;
-}
+//   return indexes;
+// }
 
-console.log(valueSumIndexes(23, array));
+// console.log(valueSumIndexes(23, array));
+
+/////////////////////////
+
+// let array = [1, 2, 3, 42, 22, 333, 222, 11, 45];
+
+// a)
+// function returnNumsByValue(value, arr) {
+//   let newArray = arr.sort((a, b) => b - a);
+
+//   while (newArray.length !== value) {
+//     newArray.pop();
+//   }
+
+//   return newArray;
+// }
+
+// console.log(returnNumsByValue(5, array));
+
+// b)
+
+// function returnNumsByValue(value, arr) {
+//   let newArray = arr.sort((a, b) => b - a);
+//   return newArray.slice(0, value);
+// }
+
+// console.log(returnNumsByValue(7, array));
