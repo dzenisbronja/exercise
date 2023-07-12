@@ -718,3 +718,26 @@
 // }
 
 // console.log(returnNumsByValue(7, array));
+
+///////////////////////////////////
+
+// a)
+
+// let array = [1, 2, 3, 42, 22, 333, 222, 11, 45];
+// let sorted = [];
+
+// for (let i = 0; i < array.length; i++) {
+//   for (let j = i + 1; j < array.length; j++) {
+//     let a = 0;
+
+//     if (array[i] > array[j]) {
+//       a = array[i];
+//       array[i] = array[j];
+//       array[j] = a;
+//     }
+//   }
+
+//   sorted.push(array[i]);
+// }
+
+// console.log(sorted);
