@@ -742,4 +742,35 @@
 
 ////////////////////////////////////
 
-let arr = [0, 1];
+function pushArray(value) {
+  let arr = [0, 1];
+  let sum = 0;
+
+  while (sum < value) {
+    arr.push(arr[arr.length - 2] + arr[arr.length - 1]);
+
+    sum += arr[arr.length - 2] + arr[arr.length - 1];
+  }
+
+  return arr;
+}
+
+console.log(pushArray(59));
+
+let threeDArray = [
+  [
+    [1, 2, 7],
+    [4, 5, 6],
+    [7, 8, 3],
+  ],
+  [
+    [2, 4, 6],
+    [8, 9, 3],
+    [5, 7, 1],
+  ],
+  [
+    [9, 8, 7],
+    [6, 5, 4],
+    [3, 2, 7],
+  ],
+];
