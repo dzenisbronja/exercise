@@ -741,16 +741,3 @@
 // console.log(sorted);
 
 ////////////////////////////////////
-
-let array = [1, 2, 3, 42, 22, 333, 222, 11, 45];
-
-let sums = [];
-let indexes = [];
-
-for (let i = 0; i < array.length; i++) {
-  for (let j = i + 1; j < array[i].length; j++) {
-    sums.push(array[i] + array[i + 1] + array[i + 2]);
-  }
-}
-
-console.log(sums);
