@@ -741,3 +741,21 @@
 // console.log(sorted);
 
 ////////////////////////////////////
+
+let fibonacci = [0, 1];
+
+function puni(value) {
+  while (value > fibonacci[fibonacci.length - 1]) {
+    fibonacci.push(
+      fibonacci[fibonacci.length - 2] + fibonacci[fibonacci.length - 1]
+    );
+  }
+
+  // if (fibonacci[fibonacci.length - 1] > value) {
+  //   fibonacci.pop();
+  // }
+
+  return fibonacci;
+}
+
+console.log(puni(33));
