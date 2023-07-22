@@ -742,20 +742,38 @@
 
 ////////////////////////////////////
 
-let fibonacci = [0, 1];
+niz1 = [
+  "nesto",
+  null,
+  "drugo",
+  false,
+  5,
+  3,
+  10,
+  true,
+  undefined,
+  undefined,
+  "plastika",
+  105,
+  103.2,
+  null,
+  "dva" == "dva",
+  1001,
+  [5, 5, 3],
+  { ime: "dzelal", godine: "koliko ti hoces" },
+  { ime: "nikola", godine: 26 },
+];
 
-function puni(value) {
-  while (value > fibonacci[fibonacci.length - 1]) {
-    fibonacci.push(
-      fibonacci[fibonacci.length - 2] + fibonacci[fibonacci.length - 1]
-    );
+const obj = {};
+
+for (let i = 0; i < niz1.length; i++) {
+  let typeName = typeof niz1[i] + "s";
+
+  if (!obj.hasOwnProperty(typeName)) {
+    obj[typeName] = [];
   }
 
-  // if (fibonacci[fibonacci.length - 1] > value) {
-  //   fibonacci.pop();
-  // }
-
-  return fibonacci;
+  obj[typeName].push(niz1[i]);
 }
 
-console.log(puni(33));
+console.log(obj);
