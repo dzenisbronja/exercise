@@ -763,7 +763,10 @@ let threeDArray = [
 let sum = 0;
 
 for (let i = 0; i < threeDArray.length; i++) {
-  sum += threeDArray[i][i][threeDArray.length - 1 - i];
+  for (let j = 0; j < threeDArray[i].length; j++) {
+    sum += threeDArray[i][j][j];
+  }
+  // sum += threeDArray[i][i][threeDArray.length - 1 - i];
 }
 
 console.log(sum);
