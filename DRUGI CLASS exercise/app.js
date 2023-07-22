@@ -740,32 +740,18 @@
 
 // console.log(sorted);
 
-////////////////////////////////////
+///////////////////////////////
 
-let threeDArray = [
-  [
-    [1, 2, 7],
-    [4, 5, 6],
-    [7, 8, 3],
-  ],
-  [
-    [2, 4, 6],
-    [8, 9, 3],
-    [5, 7, 1],
-  ],
-  [
-    [9, 8, 7],
-    [6, 5, 4],
-    [3, 2, 7],
-  ],
-];
-
+let array = [2, 3, 22, 11, 321, 213, 44, 33, 2, 221];
+let index = [];
 let sum = 0;
 
-for (let i = 0; i < threeDArray.length; i++) {
-  for (let j = 0; j < threeDArray[i].length; j++) {
-    sum += threeDArray[i][j][threeDArray.length - 1 - j];
+for (let i = 0; i < array.length; i++) {
+  if (sum < array[i] + array[i + 1] + array[i + 2]) {
+    sum = array[i] + array[i + 1] + array[i + 2];
+    index = [i, i + 1, i + 2];
   }
 }
 
 console.log(sum);
+console.log(index);
