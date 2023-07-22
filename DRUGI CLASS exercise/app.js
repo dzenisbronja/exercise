@@ -747,7 +747,7 @@ let sum = 0;
 
 function puni(value) {
   for (let i = 0; i < fibonacci.length; i++) {
-    sum = fibonacci.reduce((a, c) => a + c, 0);
+    sum = fibonacci[fibonacci.length - 2] + fibonacci[fibonacci.length - 1];
     if (value > sum) {
       fibonacci.push(
         fibonacci[fibonacci.length - 2] + fibonacci[fibonacci.length - 1]
@@ -762,4 +762,4 @@ function puni(value) {
   return fibonacci;
 }
 
-console.log(puni(34));
+console.log(puni(22));
