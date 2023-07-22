@@ -743,15 +743,20 @@
 ///////////////////////////////
 
 let array = [2, 3, 22, 11, 321, 213, 44, 33, 2, 221];
-let index = [];
-let sum = 0;
+let indexes = [];
 
-for (let i = 0; i < array.length; i++) {
-  if (sum < array[i] + array[i + 1] + array[i + 2]) {
-    sum = array[i] + array[i + 1] + array[i + 2];
-    index = [i, i + 1, i + 2];
+function sum(value) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 1; j < array.length; j++) {
+      if (array[i] + array[j] === value) {
+        indexes.push(i, j);
+      }
+
+      if (indexes.length > 1) break;
+    }
   }
+
+  return indexes;
 }
 
-console.log(sum);
-console.log(index);
+console.log(sum(5));
