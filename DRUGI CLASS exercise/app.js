@@ -742,25 +742,22 @@
 
 ////////////////////////////////////
 
-const vezbaNIzova = [
-  [4, 12, 100, 3],
-  [2, 5, 7, 9, 3],
-  [11, 53, 75, 87],
-  [3],
-  [4],
-];
+let fibonacci = [0, 1];
 
-const novi = [];
-
-for (let i = 0; i < vezbaNIzova.length; i++) {
-  let array = [];
-  for (let j = 0; j < vezbaNIzova[i].length; j++) {
-    if (vezbaNIzova[i][j] % 2 === 0) {
-      array.push(vezbaNIzova[i][j]);
+function puni(value) {
+  for (let i = 0; i < fibonacci.length; i++) {
+    if (value > fibonacci[fibonacci.length - 1]) {
+      fibonacci.push(
+        fibonacci[fibonacci.length - 2] + fibonacci[fibonacci.length - 1]
+      );
     }
   }
 
-  novi.push(array);
+  if (fibonacci[fibonacci.length - 1] > value) {
+    fibonacci.pop();
+  }
+
+  return fibonacci;
 }
 
-console.log(novi);
+console.log(puni(22));
