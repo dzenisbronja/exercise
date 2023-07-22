@@ -743,21 +743,23 @@
 ////////////////////////////////////
 
 let fibonacci = [0, 1];
+let sum = 0;
 
 function puni(value) {
   for (let i = 0; i < fibonacci.length; i++) {
-    if (value > fibonacci[fibonacci.length - 1]) {
+    sum = fibonacci.reduce((a, c) => a + c, 0);
+    if (value > sum) {
       fibonacci.push(
         fibonacci[fibonacci.length - 2] + fibonacci[fibonacci.length - 1]
       );
     }
   }
 
-  if (fibonacci[fibonacci.length - 1] > value) {
+  if (sum > value) {
     fibonacci.pop();
   }
 
   return fibonacci;
 }
 
-console.log(puni(22));
+console.log(puni(34));
