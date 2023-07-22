@@ -742,38 +742,25 @@
 
 ////////////////////////////////////
 
-niz1 = [
-  "nesto",
-  null,
-  "drugo",
-  false,
-  5,
-  3,
-  10,
-  true,
-  undefined,
-  undefined,
-  "plastika",
-  105,
-  103.2,
-  null,
-  "dva" == "dva",
-  1001,
-  [5, 5, 3],
-  { ime: "dzelal", godine: "koliko ti hoces" },
-  { ime: "nikola", godine: 26 },
+const vezbaNIzova = [
+  [4, 12, 100, 3],
+  [2, 5, 7, 9, 3],
+  [11, 53, 75, 87],
+  [3],
+  [4],
 ];
 
-const obj = {};
+const novi = [];
 
-for (let i = 0; i < niz1.length; i++) {
-  let typeName = typeof niz1[i] + "s";
-
-  if (!obj.hasOwnProperty(typeName)) {
-    obj[typeName] = [];
+for (let i = 0; i < vezbaNIzova.length; i++) {
+  let array = [];
+  for (let j = 0; j < vezbaNIzova[i].length; j++) {
+    if (vezbaNIzova[i][j] % 2 === 0) {
+      array.push(vezbaNIzova[i][j]);
+    }
   }
 
-  obj[typeName].push(niz1[i]);
+  novi.push(array);
 }
 
-console.log(obj);
+console.log(novi);
