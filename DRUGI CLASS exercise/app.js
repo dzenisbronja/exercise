@@ -742,24 +742,28 @@
 
 ////////////////////////////////////
 
-let fibonacci = [0, 1];
+let threeDArray = [
+  [
+    [1, 2, 7],
+    [4, 5, 6],
+    [7, 8, 3],
+  ],
+  [
+    [2, 4, 6],
+    [8, 9, 3],
+    [5, 7, 1],
+  ],
+  [
+    [9, 8, 7],
+    [6, 5, 4],
+    [3, 2, 7],
+  ],
+];
+
 let sum = 0;
 
-function puni(value) {
-  for (let i = 0; i < fibonacci.length; i++) {
-    sum = fibonacci[fibonacci.length - 2] + fibonacci[fibonacci.length - 1];
-    if (value > sum) {
-      fibonacci.push(
-        fibonacci[fibonacci.length - 2] + fibonacci[fibonacci.length - 1]
-      );
-    }
-  }
-
-  if (sum > value) {
-    fibonacci.pop();
-  }
-
-  return fibonacci;
+for (let i = 0; i < threeDArray.length; i++) {
+  sum += threeDArray[i][i][threeDArray.length - 1 - i];
 }
 
-console.log(puni(22));
+console.log(sum);
